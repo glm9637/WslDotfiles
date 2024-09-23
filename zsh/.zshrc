@@ -64,6 +64,8 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 
+eval "(ssh-agent -s)"
+
 cd ./code
 tmux
 clear
