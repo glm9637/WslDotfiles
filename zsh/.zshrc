@@ -49,13 +49,13 @@ alias vim='nvim'
 alias c='clear'
 
 
+export path=(~/.local/bin $path)
 
 eval "$(oh-my-posh init zsh --config ~/.config/omp/base.json)"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export path=(~/.local/bin $path)
 
 # Shell integrations
 eval "$(fzf --zsh)"
