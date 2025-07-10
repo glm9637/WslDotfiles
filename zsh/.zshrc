@@ -44,14 +44,15 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls --color'
+alias ls='ls -la --color'
 alias vim='nvim'
 alias c='clear'
 
 
-export path=(~/.local/bin $path)
+export PATH="/usr/local/bin:$PATH"
+export PATH=$PATH:/root/.local/bin
 
-eval "$(oh-my-posh init zsh --config ~/.config/omp/base.json)"
+eval "$(oh-my-posh init zsh --config '~/.config/omp/base.json')"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -66,6 +67,3 @@ export PATH="$PATH:/usr/local/go/bin"
 
 eval "(ssh-agent -s)"
 
-cd ./code
-tmux
-clear
