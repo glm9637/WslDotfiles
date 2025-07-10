@@ -8,7 +8,7 @@ ubuntu:
 	sudo apt update
 	sudo apt-get install -y zsh stow build-essential tmux unzip git curl
 	@if ! command -v oh-my-posh > /dev/null; then \
-		curl -s https://ohmyposh.dev/install.sh | sudo bash -s; \
+		curl -s https://ohmyposh.dev/install.sh | bash -s; \
 	fi
 	stow zsh tmux ohmyposh
 	@if [ ! -d "$(HOME)/.fzf" ]; then \

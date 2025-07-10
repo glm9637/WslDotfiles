@@ -49,7 +49,7 @@ alias vim='nvim'
 alias c='clear'
 
 
-export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH=$PATH:/root/.local/bin
 
 eval "$(oh-my-posh init zsh --config '~/.config/omp/base.json')"
@@ -65,5 +65,5 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 
-eval "(ssh-agent -s)"
+eval `ssh-agent -s`
 
